@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/sora</item>
+        <item>@font/sora_bold</item>
+        <item>@font/sora_extrabold</item>
+        <item>@font/sora_extralight</item>
+        <item>@font/sora_light</item>
+        <item>@font/sora_medium</item>
+        <item>@font/sora_semibold</item>
+        <item>@font/sora_thin</item>
+    </array>
+</resources>
