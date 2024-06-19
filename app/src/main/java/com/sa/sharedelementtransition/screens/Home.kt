@@ -53,6 +53,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sa.sharedelementtransition.R
+import com.sa.sharedelementtransition.data.Constants
 import com.sa.sharedelementtransition.data.Utils.categories
 import com.sa.sharedelementtransition.data.Utils.coffeeList
 import com.sa.sharedelementtransition.model.Coffee
@@ -147,9 +148,10 @@ private fun CoffeeItem(
                     Image(
                         modifier = Modifier
                             .sharedElement(
-                                sharedTransitionScope.rememberSharedContentState(key = "image-${coffee.id}"),
+                                sharedTransitionScope.rememberSharedContentState(key = "${Constants.KEY_COFFEE_IMAGE}-${coffee.id}"),
                                 animatedVisibilityScope = animatedContentScope,
-                                renderInOverlayDuringTransition = false
+                                renderInOverlayDuringTransition = false,
+                                boundsTransform = boundsTransform
                             )
                             .fillMaxWidth()
                             .height(128.dp)
@@ -160,14 +162,7 @@ private fun CoffeeItem(
                     )
 
                     Image(
-                        modifier = Modifier
-                            .sharedBounds(
-                                sharedTransitionScope.rememberSharedContentState(key = "rating-${coffee.id}"),
-                                animatedVisibilityScope = animatedContentScope,
-                                renderInOverlayDuringTransition = false,
-                                boundsTransform = boundsTransform
-                            )
-                            .align(Alignment.TopEnd),
+                        modifier = Modifier.align(Alignment.TopEnd),
                         painter = painterResource(id = R.drawable.rating),
                         contentDescription = null
                     )
@@ -177,7 +172,7 @@ private fun CoffeeItem(
                 Text(
                     modifier = Modifier
                         .sharedBounds(
-                            sharedTransitionScope.rememberSharedContentState(key = "text-${coffee.id}"),
+                            sharedTransitionScope.rememberSharedContentState(key = "${Constants.KEY_COFFEE_NAME}-${coffee.id}"),
                             animatedVisibilityScope = animatedContentScope,
                             renderInOverlayDuringTransition = false,
                             boundsTransform = textBoundsTransform
@@ -192,7 +187,7 @@ private fun CoffeeItem(
                 Text(
                     modifier = Modifier
                         .sharedBounds(
-                            sharedTransitionScope.rememberSharedContentState(key = "coffeeType-${coffee.id}"),
+                            sharedTransitionScope.rememberSharedContentState(key = "${Constants.KEY_COFFEE_TYPE}-${coffee.id}"),
                             animatedVisibilityScope = animatedContentScope,
                             renderInOverlayDuringTransition = false,
                             boundsTransform = textBoundsTransform
