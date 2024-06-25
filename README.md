@@ -1,4 +1,5 @@
 # JetCoffee
+![JetCoffee Thumbnail](docs/images/Thumbnail.png)
 
 JetCoffee is a robust and modern Android application showcasing advanced development techniques and tools. This project is built with a focus on maintainability, performance, and user experience.
 
