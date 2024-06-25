@@ -56,7 +56,7 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 ## Special Thanks
 
-Special thanks to [New Age Mood](https://www.instagram.com/newagemood/) for the free design on Figma Community.
+Special thanks to [newagemood](https://www.instagram.com/newagemood/) for the free design on Figma Community.
 
 
 ## License
