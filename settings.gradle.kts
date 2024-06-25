@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Shared Element Transition"
+rootProject.name = "JetCoffee"
 include(":app")
  
