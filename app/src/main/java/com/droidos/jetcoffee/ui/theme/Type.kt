@@ -1,4 +1,4 @@
-package com.sa.sharedelementtransition.ui.theme
+package com.droidos.jetcoffee.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,4 +1,4 @@
-package com.sa.sharedelementtransition.ui.theme
+package com.droidos.jetcoffee.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

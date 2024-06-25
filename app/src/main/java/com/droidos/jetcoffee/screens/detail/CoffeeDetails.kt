@@ -3,7 +3,7 @@
     ExperimentalSharedTransitionApi::class, ExperimentalAnimationSpecApi::class
 )
 
-package com.sa.sharedelementtransition.screens
+package com.droidos.jetcoffee.screens.detail
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedContentScope
@@ -63,20 +63,28 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.sa.sharedelementtransition.R
-import com.sa.sharedelementtransition.data.Constants
-import com.sa.sharedelementtransition.data.Utils.coffee
-import com.sa.sharedelementtransition.model.Coffee
-import com.sa.sharedelementtransition.ui.theme.Background
-import com.sa.sharedelementtransition.ui.theme.Black2A
-import com.sa.sharedelementtransition.ui.theme.CoffeeNameColor
-import com.sa.sharedelementtransition.ui.theme.CoffeeTypeColor
-import com.sa.sharedelementtransition.ui.theme.CreamyCoffee2
-import com.sa.sharedelementtransition.ui.theme.Light90
-import com.sa.sharedelementtransition.ui.theme.LightGray
-import com.sa.sharedelementtransition.ui.theme.WarmOrange
-import com.sa.sharedelementtransition.ui.theme.soraFontFamily
+import com.droidos.jetcoffee.R
+import com.droidos.jetcoffee.data.Constants
+import com.droidos.jetcoffee.data.Utils.coffee
+import com.droidos.jetcoffee.model.Coffee
+import com.droidos.jetcoffee.ui.theme.Background
+import com.droidos.jetcoffee.ui.theme.Black2A
+import com.droidos.jetcoffee.ui.theme.CoffeeNameColor
+import com.droidos.jetcoffee.ui.theme.CoffeeTypeColor
+import com.droidos.jetcoffee.ui.theme.CreamyCoffee2
+import com.droidos.jetcoffee.ui.theme.Light90
+import com.droidos.jetcoffee.ui.theme.LightGray
+import com.droidos.jetcoffee.ui.theme.WarmOrange
+import com.droidos.jetcoffee.ui.theme.soraFontFamily
 
+
+@Composable
+fun CoffeeDetailRoute(
+    sharedTransitionScope: SharedTransitionScope,
+    animatedContentScope: AnimatedContentScope,
+) {
+
+}
 
 @Composable
 fun CoffeeDetailsScreen(
@@ -397,6 +405,7 @@ fun DescriptionBody() {
             fontFamily = soraFontFamily
         )
     )
+
 }
 
 @Preview

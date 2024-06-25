@@ -1,4 +1,4 @@
-package com.sa.sharedelementtransition.model
+package com.droidos.jetcoffee.model
 
 import androidx.annotation.DrawableRes
 

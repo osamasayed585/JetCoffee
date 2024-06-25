@@ -1,9 +1,9 @@
-package com.sa.sharedelementtransition.ui.theme
+package com.droidos.jetcoffee.ui.theme
 
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import com.sa.sharedelementtransition.R
+import com.droidos.jetcoffee.R
 
 
 val soraFontFamily = FontFamily(

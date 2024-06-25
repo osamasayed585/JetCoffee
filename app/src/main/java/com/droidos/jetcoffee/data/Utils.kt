@@ -1,9 +1,10 @@
-package com.sa.sharedelementtransition.data
+package com.droidos.jetcoffee.data
 
-import com.sa.sharedelementtransition.R
-import com.sa.sharedelementtransition.model.Coffee
+import com.droidos.jetcoffee.R
+import com.droidos.jetcoffee.model.Coffee
 
 object Utils {
+// https://jsonware.com/api/v1/json/296397f2-62cf-4273-8cc0-f10853c4f2f1
 
     val categories = listOf(
         "All Coffee",

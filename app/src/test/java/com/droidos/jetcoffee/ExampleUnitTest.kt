@@ -1,4 +1,4 @@
-package com.sa.sharedelementtransition
+package com.droidos.jetcoffee
 
 import org.junit.Test
 

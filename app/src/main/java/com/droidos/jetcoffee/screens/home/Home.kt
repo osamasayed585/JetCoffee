@@ -1,6 +1,6 @@
-@file:OptIn(ExperimentalSharedTransitionApi::class)
+@file:OptIn(ExperimentalSharedTransitionApi::class, ExperimentalSharedTransitionApi::class)
 
-package com.sa.sharedelementtransition.screens
+package com.droidos.jetcoffee.screens.home
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedContentScope
@@ -52,23 +52,43 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.sa.sharedelementtransition.R
-import com.sa.sharedelementtransition.data.Constants
-import com.sa.sharedelementtransition.data.Utils.categories
-import com.sa.sharedelementtransition.data.Utils.coffeeList
-import com.sa.sharedelementtransition.model.Coffee
-import com.sa.sharedelementtransition.ui.theme.Active
-import com.sa.sharedelementtransition.ui.theme.Background
-import com.sa.sharedelementtransition.ui.theme.CharcoalGray
-import com.sa.sharedelementtransition.ui.theme.CoffeeNameColor
-import com.sa.sharedelementtransition.ui.theme.CoffeePriceColor
-import com.sa.sharedelementtransition.ui.theme.CoffeeTypeColor
-import com.sa.sharedelementtransition.ui.theme.Lighter
-import com.sa.sharedelementtransition.ui.theme.SharedElementTransitionTheme
-import com.sa.sharedelementtransition.ui.theme.WarmOrange
-import com.sa.sharedelementtransition.ui.theme.soraFontFamily
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.droidos.jetcoffee.R
+import com.droidos.jetcoffee.data.Constants
+import com.droidos.jetcoffee.data.Utils.categories
+import com.droidos.jetcoffee.data.Utils.coffeeList
+import com.droidos.jetcoffee.model.Coffee
+import com.droidos.jetcoffee.ui.theme.Active
+import com.droidos.jetcoffee.ui.theme.Background
+import com.droidos.jetcoffee.ui.theme.CharcoalGray
+import com.droidos.jetcoffee.ui.theme.CoffeeNameColor
+import com.droidos.jetcoffee.ui.theme.CoffeePriceColor
+import com.droidos.jetcoffee.ui.theme.CoffeeTypeColor
+import com.droidos.jetcoffee.ui.theme.Lighter
+import com.droidos.jetcoffee.ui.theme.JetCoffeeTheme
+import com.droidos.jetcoffee.ui.theme.WarmOrange
+import com.droidos.jetcoffee.ui.theme.soraFontFamily
 import java.util.Locale
 
+
+@Composable
+fun HomeRoute(
+    navToCoffeeDetail: (Int) -> Unit,
+    sharedTransitionScope: SharedTransitionScope,
+    animatedContentScope: AnimatedContentScope,
+    viewModel: HomeViewModel = hiltViewModel(),
+) {
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+
+    HomeScreen(
+        uiState.coffees,
+        sharedTransitionScope,
+        animatedContentScope,
+        navToCoffeeDetail
+        )
+
+}
 
 @Composable
 fun HomeScreen(
@@ -227,8 +247,6 @@ fun Categories(
     selectedCategoryItem: String,
     onClick: (String) -> Unit,
 ) {
-
-
     LazyRow(
         contentPadding = PaddingValues(horizontal = 24.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -328,7 +346,7 @@ fun TopScreen() {
 @Preview(showBackground = true)
 @Composable
 fun HomeScreenPreview() {
-    SharedElementTransitionTheme {
+    JetCoffeeTheme {
         SharedTransitionLayout {
             val state by remember { mutableStateOf(true) }
 
