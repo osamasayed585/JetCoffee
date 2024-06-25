@@ -54,6 +54,11 @@ The app is currently in progress.
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
+## Special Thanks
+
+Special thanks to [New Age Mood](https://www.instagram.com/newagemood/) for the free design on Figma Community.
+
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
